@@ -8,7 +8,13 @@ COPY package*.json ./
 
 RUN npm install
 
-#COPY /src ./
+COPY public ./public
+
+COPY src ./src
+
+COPY .env ./
+
+COPY .env.development.local ./
 
 EXPOSE 3000
 
