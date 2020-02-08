@@ -14,6 +14,6 @@ COPY src ./src
 
 COPY .env ./
 
-EXPOSE 3000
+EXPOSE 3000git branch
 
 CMD ["npm" ,  "start"]

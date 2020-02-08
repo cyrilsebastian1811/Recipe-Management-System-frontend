@@ -1,7 +1,8 @@
 pipeline {
   environment {
-    registry = "puneet2020/webapp-frontend"
+    registry = "${env.registry}"
     registryCredential = 'dockerhub'
+    giturl="${env.giturl}"
     dockerImage=''
     commit=''
   }
@@ -19,9 +20,9 @@ pipeline {
               }
      stage('Cloning Git') {
       steps {
-        git branch: 'a4',
+        git branch: 'master',
             credentialsId: 'GitToken',
-            url: 'https://github.com/puneetneu/webapp-frontend.git'
+            url: "${env.giturl}"
         }
    }
     stage('Building image') {
