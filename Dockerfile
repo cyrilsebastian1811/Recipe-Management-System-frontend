@@ -8,8 +8,12 @@ COPY package*.json ./
 
 RUN npm install
 
-COPY /src ./
+COPY public ./public
 
-EXPOSE 3100
+COPY src ./src
+
+COPY .env ./
+
+EXPOSE 3000git branch
 
 CMD ["npm" ,  "start"]
