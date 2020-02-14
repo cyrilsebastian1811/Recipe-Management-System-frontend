@@ -1,4 +1,20 @@
+# Team information
+
+| Team Members        | Github Id            | NUID      |
+| ------------------- |:---------           :|:---------:|
+| Suhas Pasricha      | suhas1602            | 001434745 |
+| Puneet Tanwar       | puneetneu            | 001409671 |
+| Cyril Sebastian     | cyrilsebastian1811   | 001448384 |
+| Shubham Sharma      | shubh1646            | 001447366 |
+
+
+# webapp-frontend
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+# Jenkins and dockerhub settings
+
+Please see https://github.com/Advanced-Cloud-2020/webapp-backend
 
 
 ## Available Scripts
