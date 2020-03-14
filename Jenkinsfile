@@ -28,7 +28,6 @@ pipeline {
           script {
             echo "${GIT_BRANCH}"
             echo "${GIT_URL}"
-            // sh("git config user.name")
 
             git_info = git branch: "${GIT_BRANCH}", credentialsId: "github-ssh", url: "${GIT_URL}"
             git_hash = "${git_info.GIT_COMMIT[0..6]}"
@@ -114,7 +113,6 @@ pipeline {
       steps {
         script {
           sshagent(['github-ssh']) {
-            sh("git config user.name")
             sh "git commit -am 'frontend version upgrade to ${nextVersion} by jenkins'"
             sh("git push origin ${HELM_CHART_GIT_BRANCH}")
           }
